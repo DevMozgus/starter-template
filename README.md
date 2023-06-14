@@ -1,4 +1,10 @@
-### Color Scheme
+## Starter Template
+
+My next.js/react template with some nice files for easy global style changes :)
+
+[Preview here](https://urlicic-starter-template.netlify.app/en).
+
+### Global styling
 
 Edit global.scss for colors, layout, radius, etc
 
