@@ -1,0 +1,217 @@
+/* purgecss start ignore */
+
+@tailwind base;
+@tailwind components;
+
+/******************* GLOBAL VARIABLES ********************/
+
+// COLORS
+$primary-dark: #004a7c;
+$primary-light: #005f9f;
+$secondary-dark: #007a66;
+$secondary-light: #009f84;
+$accent-dark: #171f24;
+$accent-light: #e7f1f5;
+
+// BORDER RADIUS
+$borderRadiusGlobal: 0.5rem;
+
+:root {
+  --color-primary-dark: #{$primary-dark};
+  --color-primary-light: #{$primary-light};
+  --color-secondary-dark: #{$secondary-dark};
+  --color-secondary-light: #{$secondary-light};
+  --color-accent-dark: #{$accent-dark};
+  --color-accent-light: #{$accent-light};
+  --borderRadius-global: #{$borderRadiusGlobal};
+}
+/******************* GLOBAL VARIABLES END ********************/
+
+// TODO: Fix yPadding not being responsive
+/******************* SECTION PADDING/MARGIN ********************/
+
+@mixin styling($map) {
+  .section-x {
+    padding-left: map-get($map, "xPadding");
+    padding-right: map-get($map, "xPadding");
+  }
+
+  .section-y {
+    padding-top: map-get($map, "yPadding");
+    padding-bottom: map-get($map, "yPadding");
+  }
+
+  .section {
+    padding: map-get($map, "yPadding") map-get($map, "xPadding");
+  }
+
+  .max-x {
+    max-width: map-get($map, "max-x");
+  }
+
+  .max-x2 {
+    max-width: map-get($map, "max-x2");
+  }
+}
+
+@include styling(
+  (
+    xPadding: 1rem,
+    yPadding: 2rem,
+    max-x: 20rem,
+    max-x2: 25rem,
+  )
+);
+
+@media (min-width: 362px) {
+  @include styling(
+    (
+      xPadding: 1.5rem,
+      yPadding: 2rem,
+      max-x: 25rem,
+      max-x2: 30rem,
+    )
+  );
+}
+
+@media (min-width: 768px) {
+  @include styling(
+    (
+      max-x: 30rem,
+      max-x2: 35rem,
+      yPadding: 4rem,
+      xPadding: 1.5rem,
+    )
+  );
+}
+
+@media (min-width: 1024px) {
+  @include styling(
+    (
+      max-x: 55rem,
+      max-x2: 60rem,
+      yPadding: 5rem,
+      xPadding: 1.5rem,
+    )
+  );
+}
+
+@media (min-width: 1280px) {
+  @include styling(
+    (
+      max-x: 65rem,
+      max-x2: 70rem,
+      yPadding: 6rem,
+      xPadding: 1.5rem,
+    )
+  );
+}
+
+/******************* SECTION PADDING/MARGIN END ********************/
+
+* {
+  font-family: var(--font-default), "Roboto", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.landing-bg {
+  // background-image: linear-gradient(to bottom left, rgba($primary-dark, 0.9), rgba($secondary-dark, 0.9)),
+  //   url("../public/office.webp");
+  background-image: linear-gradient(to bottom left, rgba($primary-dark, 0.9), rgba($secondary-dark, 0.9));
+}
+
+.carousel {
+  .control-dots {
+    margin: 0 !important;
+    li.dot {
+      opacity: 100%;
+      background: $accent-light;
+      &.selected {
+        background: white;
+      }
+    }
+    @media (max-width: 1024px) {
+      li.dot {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .slide:not(.selected) {
+    opacity: 60%;
+  }
+  .slide {
+    @media (min-width: 1024px) {
+      min-width: 50% !important;
+    }
+  }
+}
+
+input,
+textarea {
+  outline-width: 0px !important;
+  outline-color: $accent-dark !important;
+  &:focus {
+    outline-color: $primary-light !important;
+    outline-width: 2px !important;
+  }
+  &.error {
+    outline-color: rgb(239 68 68) !important;
+    outline-width: 2px !important;
+  }
+}
+
+/******************* FONT SIZES ********************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 0.75rem !important;
+  font-size: 1.1rem;
+}
+
+h3 {
+  margin-bottom: 0.25rem !important;
+}
+
+* {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  * {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  * {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 3rem !important;
+    margin-bottom: 1rem !important;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/******************* FONT SIZES END ********************/
+
+/* purgecss end ignore */
+@tailwind utilities;

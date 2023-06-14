@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "review": "Reviews",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "landing": {
+    "h1": "Lorem ipsum dolor sit amet",
+    "p": "Fusce eget facilisis tellus, curabitur euismod mauris libero.",
+    "h2": "Lorem ipsum",
+    "box1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "box2": "Vivamus sed gravida ante. Donec est odio, congue vel tristique nec, aliquet vitae eros.",
+    "box3": "Suspendisse hendrerit orci eleifend, malesuada tortor et, dictum arcu."
+  },
+  "customerCTA": {
+    "section1": {
+      "h2": "Morbi iaculis est sed suscipit",
+      "l1": "Morbi iaculis, est sed suscipit placerat, nulla lectus condimentum sem, bibendum placerat sapien mauris ut velit.",
+      "l2": "Morbi ac tincidunt ligula. Pellentesque convallis tempor orci, in laoreet ante lacinia quis.",
+      "l3": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    },
+    "section2": {
+      "h2": "Nam consequat finibus nulla",
+      "l1": "Curabitur facilisis ac elit tristique consectetur.",
+      "l2": "Aenean cursus neque justo, eget pulvinar lorem. ",
+      "l3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      "l4": "Vivamus sed gravida ante. Donec est odio, congue vel tristique nec, aliquet vitae eros."
+    }
+  },
+  "reviews": {
+    "h2": "Suspendisse hendrerit",
+    "c1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed gravida ante.",
+    "c2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed gravida ante.",
+    "c3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed gravida ante."
+  },
+  "about": {
+    "h2": "Suspendisse hendrerit orci eleifend",
+    "tag": "Morbi iaculis, est sed suscipit placerat",
+    "h3": "Orci varius natoque penatibus",
+    "p1": "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam consequat finibus nulla sodales aliquet. Integer blandit auctor nisl, at facilisis quam rutrum blandit. Curabitur facilisis ac elit tristique consectetur.",
+    "p2": "Pellentesque sed placerat diam. Quisque sit amet dignissim justo. Fusce vitae hendrerit eros. Nulla tincidunt turpis ac erat suscipit.",
+    "p3": "estibulum fringilla maximus libero auctor tempor. Proin aliquam tellus ut odio convallis, in viverra justo vulputate."
+  },
+  "contact": {
+    "form": {
+      "h2": "Book now",
+      "name": "Name",
+      "namePlaceholder": "First and lastname",
+      "phone": "Phone number",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "send": "Send Message",
+      "error": "Wrong format",
+      "success": "Thank you! Your message has been sent.",
+      "formError": "Unknown error. Please try again later."
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "address": "Address"
+  },
+  "CTA": "Book Now",
+  "alt": {
+    "potrait": "********* TODO: REPLACE ALT TEXT *********"
+  }
+}
