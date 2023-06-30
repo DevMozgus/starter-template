@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway # change to test-repo for testing
   branch: cms # Branch to update (optional; defaults to master)
 media_folder: public/img
 public_folder: img
