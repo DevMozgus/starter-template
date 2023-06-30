@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { PageLink } from "./Navigation"
@@ -9,7 +8,6 @@ interface NavbarProps {
 }
 
 export function Navbar({ pages }: NavbarProps) {
-  const t: any = useTranslations()
   const router = useRouter()
 
   return (
@@ -34,7 +32,7 @@ export function Navbar({ pages }: NavbarProps) {
             {pages.map((page: PageLink, index) => (
               <li key={`navbar${index}`} className="inline hover:cursor-pointer text-lg">
                 <Link href={""} onClick={page.href}>
-                  <span>{t(page.title)}</span>
+                  <span>{page.title}</span>
                 </Link>
               </li>
             ))}

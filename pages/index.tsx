@@ -11,14 +11,6 @@ import { LocalBusinessJsonLd, NextSeo } from "next-seo"
 //@ts-ignore
 import { attributes, react as HomeContent } from "../content/home.md"
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  return {
-    props: {
-      messages: (await import(`../locale/${locale}.json`)).default,
-    },
-  }
-}
-
 export default function Home() {
   let { title, cats } = attributes
   return (

@@ -7,6 +7,7 @@ i18n: { structure: multiple_folders, locales: ["en", "de"] }
 collections:
   - name: "pages"
     label: "Pages"
+    i18n: true
     files:
       - label: "Home"
         name: "home"
