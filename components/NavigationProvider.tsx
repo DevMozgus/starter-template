@@ -1,5 +1,4 @@
 import { useScrollIntoView } from "@mantine/hooks"
-import { useTranslations } from "next-intl"
 import { createContext, MutableRefObject } from "react"
 
 interface NavigationRefs {
