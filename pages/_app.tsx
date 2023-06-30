@@ -7,7 +7,6 @@ import "../styles/global.scss"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { MutableRefObject, useState } from "react"
 import { Navigation } from "../components/Navigation"
-import { AbstractIntlMessages, NextIntlProvider } from "next-intl"
 import { NavigationProvider } from "../components/NavigationProvider"
 
 import { Montserrat } from "@next/font/google"
@@ -21,7 +20,6 @@ const font = Montserrat({
 }) //! TODO: set desired preload font
 
 type Props = AppProps & {
-  pageProps: { messages: AbstractIntlMessages }
   ColorScheme: ColorScheme
 }
 
@@ -37,23 +35,21 @@ export default function App({ Component, pageProps, ColorScheme }: Props) {
   //! TODO: implement inside globalscss
 
   return (
-    <NextIntlProvider messages={pageProps?.messages}>
-      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider
-          theme={{ colorScheme, ...theme }}
-          emotionOptions={{ key: "mantine", prepend: false }} // ! Required to load tailwind styles after mantine: https://github.com/mantinedev/mantine/issues/823
-          withGlobalStyles
-          withNormalizeCSS
-        >
-          <NavigationProvider>
-            <div className={`${font.variable}`}>
-              <Navigation />
-              <Component {...pageProps} />
-            </div>
-          </NavigationProvider>
-        </MantineProvider>
-      </ColorSchemeProvider>
-    </NextIntlProvider>
+    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <MantineProvider
+        theme={{ colorScheme, ...theme }}
+        emotionOptions={{ key: "mantine", prepend: false }} // ! Required to load tailwind styles after mantine: https://github.com/mantinedev/mantine/issues/823
+        withGlobalStyles
+        withNormalizeCSS
+      >
+        <NavigationProvider>
+          <div className={`${font.variable}`}>
+            <Navigation />
+            <Component {...pageProps} />
+          </div>
+        </NavigationProvider>
+      </MantineProvider>
+    </ColorSchemeProvider>
   )
 }
 

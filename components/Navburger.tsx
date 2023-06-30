@@ -4,7 +4,6 @@ import { PageLink } from "./Navigation"
 import { useState } from "react"
 import { Burger } from "@mantine/core"
 import { useScrollLock } from "@mantine/hooks"
-import { useTranslations } from "next-intl"
 import { useRouter } from "next/router"
 
 interface NavburgerProps {
@@ -20,7 +19,6 @@ interface NavburgerProps {
  */
 export function Navburger({ pages, buttonStyle, overlayStyle }: NavburgerProps) {
   const [opened, setOpened] = useState(false)
-  const t: any = useTranslations()
   const router = useRouter()
   const [scrollLocked, setScrollLocked] = useScrollLock()
 
@@ -70,7 +68,7 @@ export function Navburger({ pages, buttonStyle, overlayStyle }: NavburgerProps) 
                     toggle()
                   }}
                 >
-                  <span>{t(page.title)}</span>
+                  <span>{page.title}</span>
                 </Link>
               </li>
             ))}

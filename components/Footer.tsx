@@ -1,9 +1,7 @@
 import Link from "next/link"
-import { useTranslations } from "next-intl"
 import { SvgWave } from "./svg/SvgWave"
 
 export function Footer() {
-  const t: any = useTranslations()
   return (
     <div className="bg-gradient-to-bl from-secondary-dark to-primary-light text-accent-light text-sm">
       <div className="w-screen top-[-1px] right-0 relative text-primary-dark z-0 transform -scale-x-100 overflow-x-hidden">
